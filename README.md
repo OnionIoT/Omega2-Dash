@@ -80,14 +80,23 @@ Valid options are `0`, `1`, `2`, and `3`
 
 # Demos
 
+## Terminal Demo
+
+Running the Omega's terminal on the display:
+
+![terminal demo gif](./images/demo-terminal-0.gif)
+
+- Run `sh > /dev/tty0` on your Omega2 Dash. Everything you type from then on will show up on the display and not in your terminal window
+- Hit `ctrl+c` to exit
+
 ## LittleVGL UI Demo
 
 Demo of a touch-enabled GUI made with LittleV Graphics Library:
 
-![littlev demo gif](./images/lvgl-demo-0.gif)
+![littlev demo gif](./images/demo-lvgl-0.gif)
 
 Steps to run on your Omega2 Dash:
 
-- Download [`o2-dash-lvgl-demo`](./bin/o2-dash-lvgl-demo) to your Omega
+- Download [`bin/o2-dash-lvgl-demo` from this repo](./bin/o2-dash-lvgl-demo) to your Omega
 - Make it executable: `chmod +x o2-dash-lvgl-demo`
 - Run it: `./o2-dash-lvgl-demo`
