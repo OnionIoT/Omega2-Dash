@@ -76,3 +76,18 @@ echo 1 > /sys/class/graphics/fbcon/rotate
 ```
 
 Valid options are `0`, `1`, `2`, and `3`
+
+
+# Demos
+
+## LittleVGL UI Demo
+
+Demo of a touch-enabled GUI made with LittleV Graphics Library:
+
+![littlev demo gif](./images/lvgl-demo-0.gif)
+
+Steps to run on your Omega2 Dash:
+
+- Download [`o2-dash-lvgl-demo`](./bin/o2-dash-lvgl-demo) to your Omega
+- Make it executable: `chmod +x o2-dash-lvgl-demo`
+- Run it: `./o2-dash-lvgl-demo`
