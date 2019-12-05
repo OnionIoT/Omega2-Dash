@@ -100,3 +100,17 @@ Steps to run on your Omega2 Dash:
 - Download [`bin/o2-dash-lvgl-demo` from this repo](./bin/o2-dash-lvgl-demo) to your Omega
 - Make it executable: `chmod +x o2-dash-lvgl-demo`
 - Run it: `./o2-dash-lvgl-demo`
+
+## Displaying png & jpg Images
+
+Display image files:
+
+![onion logo](./images/demo-fbi-0.jpg)![map](./images/demo-fbi-1.jpg)
+
+Steps to display images on your Omega2 Dash:
+- First install the fbi package: `opkg update ; opkg install fbi`
+  - This only needs to be done once
+- [Transfer](http://docs.onion.io/omega2-docs/transferring-files.html) image files to the Omega. Supported file types are png, jpg
+- Display the images by running `fbi -d /dev/fb0 -notty -nocomments --noverbose <PATH TO IMAGE FILE>`
+  - For example `fbi -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
+  - The fbi program is really flexible, try running it with multiple files and see what happens!
