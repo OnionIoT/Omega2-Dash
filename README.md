@@ -112,5 +112,7 @@ Steps to display images on your Omega2 Dash:
   - This only needs to be done once
 - [Transfer](http://docs.onion.io/omega2-docs/transferring-files.html) image files to the Omega. Supported file types are png, jpg
 - Display the images by running `fbi -d /dev/fb0 -notty -nocomments --noverbose <PATH TO IMAGE FILE>`
-  - For example `fbi -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
-  - The fbi program is really flexible, try running it with multiple files and see what happens!
+ 
+For example: `fbi -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
+ 
+The fbi program is really flexible, try running it with multiple files and see what happens!
