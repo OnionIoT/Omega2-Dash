@@ -89,18 +89,6 @@ Running the Omega's terminal on the display:
 - Run `sh > /dev/tty0` on your Omega2 Dash. Everything you type from then on will show up on the display and not in your terminal window
 - Hit `ctrl+c` to exit
 
-## LittleVGL UI Demo
-
-Demo of a touch-enabled GUI made with LittleV Graphics Library:
-
-![littlev demo gif](./images/demo-lvgl-0.gif)
-
-Steps to run on your Omega2 Dash:
-
-- Download [`bin/o2-dash-lvgl-demo` from this repo](./bin/o2-dash-lvgl-demo) to your Omega
-- Make it executable: `chmod +x o2-dash-lvgl-demo`
-- Run it: `./o2-dash-lvgl-demo`
-
 ## Displaying png & jpg Images
 
 Display image files:
@@ -116,3 +104,29 @@ Steps to display images on your Omega2 Dash:
 For example: `fbi -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
  
 The fbi program is really flexible, try running it with multiple files and see what happens!
+
+## LittleVGL UI Demo
+
+Demo of a touch-enabled GUI made with LittleV Graphics Library:
+
+![littlev demo gif](./images/demo-lvgl-0.gif)
+
+Steps to run on your Omega2 Dash:
+
+- Download [`bin/o2-dash-lvgl-demo` from this repo](./bin/o2-dash-lvgl-demo) to your Omega
+- Make it executable: `chmod +x o2-dash-lvgl-demo`
+- Run it: `./o2-dash-lvgl-demo`
+
+## LittleVGL Example Program
+
+We've put together an program that can serve as the starting for Omega2 Dash programs using the LittleV Graphics Library. See the repo here: https://github.com/OnionIoT/lv_example
+
+![lv_example](./images/demo_lv_example_0.jpg)
+
+Out of the box it supports:
+* The Linux Framebuffer - will draw to the Omega2 Dash display 
+* The XPT7603 touch input device on the Omega2 Dash
+* A makefile and instructions to build it as an OpenWRT package
+* A small demo
+
+Use this to get started with your own lvgl programs!
