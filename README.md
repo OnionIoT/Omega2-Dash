@@ -6,15 +6,18 @@ Onion Omega2 Dash IoT Computer - a touchscreen device based on the Omega2
 
 # Bring-Up Guide
 
-Test firmware for the Omega2 Dash is available: [`omega2-dash-v0.3.2-b228.bin`](./bin/omega2-dash-v0.3.2-b228.bin)
+Official firmware for the Omega2 Dash is available: [`omega2dash-v0.3.2-b233.bin`](http://repo.onioniot.com.s3.amazonaws.com/omega2/images/omega2dash-v0.3.2-b233.bin)
 
 Steps to flash your Omega2 Dash:
 
-- Download the `omega2-dash-v0.3.2-b228.bin` firmware to the `/tmp` directory on your Omega2 Dash
-- Use `sysupgrade` to install the firmware: `sysupgrade -n -v /tmp/omega2-dash-v0.3.2-b228.bin`
-- Wait until it reboots, and then reboot again
+- Download the `omega2dash-v0.3.2-b233.bin` firmware to the `/tmp` directory on your Omega2 Dash
+- Use `sysupgrade` to install the firmware: `sysupgrade -n -v /tmp/omega2dash-v0.3.2-b233.bin`
+  - If you're upgrading from the old test firmware, you will probably have to add a `-F` flag to the `sysupgrade` command
+- Wait until it reboots
 
 This firmware has a kernel driver for the ILI9341 TFT driver and enables a framebuffer device, `/dev/fb0`.
+
+# Doing Things with the Omega2 Dash
 
 ## Backlight Control
 
@@ -31,6 +34,8 @@ onion pwm 3 50 120
 omega2-ctrl gpiomux set uart2 pwm23
 onion pwm 3 0 120
 ```
+
+> The **second-last** argument controls the duty cycle.
 
 ## Touch Driver
 
@@ -121,8 +126,6 @@ Steps to run on your Omega2 Dash:
 
 We've put together an program that can serve as the starting for Omega2 Dash programs using the LittleV Graphics Library. See the repo here: https://github.com/OnionIoT/lv_example
 
-![lv_example](./images/demo_lv_example_0.jpg)
-
 Out of the box it supports:
 * The Linux Framebuffer - will draw to the Omega2 Dash display 
 * The XPT7603 touch input device on the Omega2 Dash
@@ -130,3 +133,11 @@ Out of the box it supports:
 * A small demo
 
 Use this to get started with your own lvgl programs!
+
+![lv_example](./images/demo_lv_example_0.jpg)
+
+Steps to run the existing example on your Omega2 Dash:
+
+- Download [`bin/lv_example` from this repo](./bin/lv_example) to your Omega
+- Make it executable: `chmod +x lv_example`
+- Run it: `./lv_example`
