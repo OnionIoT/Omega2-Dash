@@ -92,7 +92,7 @@ Running the Omega's terminal on the display:
 ![terminal demo gif](./images/demo-terminal-0.gif)
 
 - Run `sh > /dev/tty0` on your Omega2 Dash. Everything you type from then on will show up on the display and not in your terminal window
-- Hit `ctrl+c` to exit
+- Hit `ctrl+d` to exit
 
 ## Displaying png & jpg Images
 
