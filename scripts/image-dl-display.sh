@@ -29,4 +29,5 @@ FILENAME=$(echo "img_${NOW}${FILE}")
 wget -O $FILENAME $1 
 
 # display to the screen
+killall fbi
 fbi -d /dev/fb0 -notty -nocomments --noverbose $FILENAME
