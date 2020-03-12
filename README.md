@@ -4,18 +4,33 @@ Onion Omega2 Dash IoT Computer - a touchscreen device based on the Omega2
 ![front](./images/o2-dash-sample-0.jpg)
 ![back](./images/o2-dash-sample-1.jpg)
 
-# Bring-Up Guide
+# Firmware Info
 
-Official firmware for the Omega2 Dash is available: [`omega2dash-v0.3.2-b233.bin`](http://repo.onioniot.com.s3.amazonaws.com/omega2/images/omega2dash-v0.3.2-b233.bin)
+Firmware for the Omega2 Dash is built using [Onion's fork of the OpenWRT source repo](https://github.com/OnionIoT/source). 
 
-Steps to flash your Omega2 Dash:
+Differences from the regular Omega2/Omega2+ firmware include:
 
-- Download the `omega2dash-v0.3.2-b233.bin` firmware to the `/tmp` directory on your Omega2 Dash
-- Use `sysupgrade` to install the firmware: `sysupgrade -n -v /tmp/omega2dash-v0.3.2-b233.bin`
-  - If you're upgrading from the old test firmware, you will probably have to add a `-F` flag to the `sysupgrade` command
-- Wait until it reboots
+* Includes kernel driver for the ILI9341 TFT driver. This enables the `/dev/fb0` framebuffer device.
+* Includes the `omega2-dash-base` software package
 
-This firmware has a kernel driver for the ILI9341 TFT driver and enables a framebuffer device, `/dev/fb0`.
+To build firmware for the Omega2 Dash using Onion's OpenWRT source repo, run `python scripts/onion-setup-build.py -c .config.O2Dash` before launching the compilation.
+
+For more details, see [the `omega2-dash-base` package in Onion's OpenWRT Packages Repo](https://github.com/OnionIoT/OpenWRT-Packages/tree/openwrt-18.06/omega2-dash).
+
+# Bring-Up Guide for Beta Units
+
+No longer needed since official firmware for the Omega2 Dash is available.
+
+~~Official firmware for the Omega2 Dash is available: [`omega2dash-v0.3.2-b233.bin`](http://repo.onioniot.com.s3.amazonaws.com/omega2/images/omega2dash-v0.3.2-b233.bin)~~
+
+~~Steps to flash your Omega2 Dash:~~
+
+- ~~Download the `omega2dash-v0.3.2-b233.bin` firmware to the `/tmp` directory on your Omega2 Dash~~
+- ~~Use `sysupgrade` to install the firmware: `sysupgrade -n -v /tmp/omega2dash-v0.3.2-b233.bin`~~
+  - ~~If you're upgrading from the old test firmware, you will probably have to add a `-F` flag to the `sysupgrade` command~~
+- ~~Wait until it reboots~~
+
+~~This firmware has a kernel driver for the ILI9341 TFT driver and enables a framebuffer device, `/dev/fb0`.~~
 
 # Doing Things with the Omega2 Dash
 
