@@ -4,6 +4,14 @@ Onion Omega2 Dash IoT Computer - a touchscreen device based on the Omega2
 ![front](./images/o2-dash-sample-0.jpg)
 ![back](./images/o2-dash-sample-1.jpg)
 
+# Getting Started
+
+Get your Omega2 Dash up and running by following the [Omega2 Dash guide](https://onion.io/omega2-dash-guide).
+
+# Hardware Info
+
+Schematics and layout images along with physical measurements are available for the Omega2 Dash in the [Hardware](./Hardware) directory.
+
 # Firmware Info
 
 Firmware for the Omega2 Dash is built using [Onion's fork of the OpenWRT source repo](https://github.com/OnionIoT/source). 
@@ -17,22 +25,11 @@ To build firmware for the Omega2 Dash using Onion's OpenWRT source repo, run `py
 
 For more details, see [the `omega2-dash-base` package in Onion's OpenWRT Packages Repo](https://github.com/OnionIoT/OpenWRT-Packages/tree/openwrt-18.06/omega2-dash).
 
-# Bring-Up Guide for Beta Units
-
-No longer needed since official firmware for the Omega2 Dash is available.
-
-~~Official firmware for the Omega2 Dash is available: [`omega2dash-v0.3.2-b233.bin`](http://repo.onioniot.com.s3.amazonaws.com/omega2/images/omega2dash-v0.3.2-b233.bin)~~
-
-~~Steps to flash your Omega2 Dash:~~
-
-- ~~Download the `omega2dash-v0.3.2-b233.bin` firmware to the `/tmp` directory on your Omega2 Dash~~
-- ~~Use `sysupgrade` to install the firmware: `sysupgrade -n -v /tmp/omega2dash-v0.3.2-b233.bin`~~
-  - ~~If you're upgrading from the old test firmware, you will probably have to add a `-F` flag to the `sysupgrade` command~~
-- ~~Wait until it reboots~~
-
-~~This firmware has a kernel driver for the ILI9341 TFT driver and enables a framebuffer device, `/dev/fb0`.~~
-
 # Doing Things with the Omega2 Dash
+
+Everything you need to know about using the Omega2 Dash can be found in the [Omega2 Dash guide](https://onion.io/omega2-dash-guide/#doing-things).
+
+The topics below are available for quick reference.
 
 ## Backlight Control
 
