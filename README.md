@@ -116,13 +116,15 @@ Steps to display images on your Omega2 Dash:
 - First install the fbi package: `opkg update ; opkg install fbi`
   - This only needs to be done once
 - [Transfer](http://docs.onion.io/omega2-docs/transferring-files.html) image files to the Omega. Supported file types are png, jpg
-- Display the images by running `fbi -d /dev/fb0 -notty -nocomments --noverbose <PATH TO IMAGE FILE>`
+- Display the images by running `fbi -a -d /dev/fb0 -notty -nocomments --noverbose <PATH TO IMAGE FILE>`
  
-For example: `fbi -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
+For example: `fbi -a -d /dev/fb0 -notty -nocomments --noverbose /root/map.png`
  
 The fbi program is really flexible, try running it with multiple files and see what happens!
 
 ## LittleVGL UI Demo
+
+> This is a demo program! If you're looking for a solid foundation for building an LVGL program for the Omega2 Dash, please see the lvgl quickstart template: https://github.com/OnionIoT/lv_example
 
 Demo of a touch-enabled GUI made with LittleV Graphics Library:
 
@@ -134,13 +136,14 @@ Steps to run on your Omega2 Dash:
 - Make it executable: `chmod +x o2-dash-lvgl-demo`
 - Run it: `./o2-dash-lvgl-demo`
 
-## LittleVGL Example Program
+## LittleVGL Example Program & Quickstart Template
 
 We've put together an program that can serve as the starting for Omega2 Dash programs using the LittleV Graphics Library. See the repo here: https://github.com/OnionIoT/lv_example
 
 Out of the box it supports:
 * The Linux Framebuffer - will draw to the Omega2 Dash display 
 * The XPT7603 touch input device on the Omega2 Dash
+* A script to cross compile the code for the Omega2 Dash (using Docker and the OpenWRT SDK)
 * A makefile and instructions to build it as an OpenWRT package
 * A small demo
 
